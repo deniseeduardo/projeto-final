@@ -1,11 +1,15 @@
 # FACULDADE GRAN
 [Faculdade Gran](https://faculdade.grancursosonline.com.br/)
 
-## Projeto Disciplina Projeto Integrador
+const http = require('http');
 
-### Passos para executar o projeto:
+const server = http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Olá, Mundo!');
+});
 
-#### 1. Abra o Terminal no Visual Studio e Inicialize um novo projeto Node.js:
+const PORT = 3000;
 
-```bash
-npm init
+server.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}/`);
+});
